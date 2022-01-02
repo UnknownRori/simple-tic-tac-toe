@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 1s background-color;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.not-allowed {
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+#app {
+    height: 100vh;
+    width: 100vw;
+}
+
+#app #message-box {
+    text-align: center;
+    font-size: 2rem;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(78, 78, 78, 0.479);
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 200px);
+    grid-template-rows: minmax(50px, auto) repeat(3, 50px);
+}
+
+#app #message-box [data-message] {
+    grid-column: 1 / -1;
+}
+
+#app #message-box button {
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0.2rem;
+    background-color: rgba(59, 59, 59, 0.76);
+}
+
+#app #message-box button:hover {
+    background-color: rgba(44, 44, 44, 0.87);
+}
+
+#app #gamescreen {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(3, 100px);
+}
+
+#app #gamescreen button {
+    color: black;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0.2rem;
+    background-color: rgba(255, 255, 255, 0.664);
+    font-size: 3rem;
+}
+
+#app #gamescreen button:hover {
+    color: black;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0.2rem;
+    background-color: rgba(168, 168, 168, 0.664);
+}
